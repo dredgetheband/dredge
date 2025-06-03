@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dredge</title>
+  <style>
+    body {
+      background-color: #7b338e; /* dark purple */
+      color: black;
+      font-family: "Courier New", Courier, monospace;
+      text-transform: lowercase;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .linkbox {
+      display: none;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    input[type="checkbox"]:checked + .linkbox {
+      display: block;
+    }
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>dredge</h1>
+
+  <label>
+    <input type="checkbox" />
+    tour
+    <div class="linkbox">
+      <p>july 4 – springfield, mo – <a href="https://example.com/tickets1" target="_blank">tickets</a></p>
+      <p>july 12 – denver, co – <a href="https://example.com/tickets2" target="_blank">tickets</a></p>
+      <p>july 20 – chicago, il – <a href="https://example.com/tickets3" target="_blank">tickets</a></p>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    listen
+    <div class="linkbox">
+      <p><a href="https://yourband.bandcamp.com" target="_blank">bandcamp</a></p>
+      <p><a href="https://open.spotify.com/yourband" target="_blank">spotify</a></p>
+      <p><a href="https://soundcloud.com/yourband" target="_blank">soundcloud</a></p>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    merch
+    <div class="linkbox">
+      <p><a href="https://yourband.bigcartel.com" target="_blank">buy merch</a></p>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    socials
+    <div class="linkbox">
+      <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
+      <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
+      <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    contact
+    <div class="linkbox">
+      <p><a href="mailto:dredge.mgmt@gmail.com">dredge.mgmt@gmail.com</a></p>
+    </div>
+  </label>
+
+</body>
+</html>
