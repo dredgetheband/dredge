@@ -4,15 +4,30 @@
   <title>dredge</title>
   <style>
     body {
-      background-color: #7b338e; /* dark purple */
+      background-color: #7b338e;
       color: black;
       font-family: "Courier New", Courier, monospace;
       text-transform: lowercase;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+    .left {
+      padding: 40px;
+      width: 60%;
+    }
+    .right {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 40px;
     }
     h1 {
-      text-align: center;
       font-size: 36px;
+      margin-bottom: 30px;
     }
     label {
       display: block;
@@ -34,57 +49,68 @@
     a:hover {
       text-decoration: none;
     }
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 80vh;
+    }
   </style>
 </head>
 <body>
 
-  <h1>dredge</h1>
+  <div class="left">
+    <h1>dredge</h1>
 
-  <label>
-    <input type="checkbox" />
-    tour
-    <div class="linkbox">
-      <p>july 4 – springfield, mo – <a href="https://example.com/tickets1" target="_blank">tickets</a></p>
-      <p>july 12 – denver, co – <a href="https://example.com/tickets2" target="_blank">tickets</a></p>
-      <p>july 20 – chicago, il – <a href="https://example.com/tickets3" target="_blank">tickets</a></p>
-    </div>
-  </label>
+    <label>
+      <input type="checkbox" />
+      tour
+      <div class="linkbox">
+        <p>july 4 – springfield, mo – <a href="https://example.com/tickets1" target="_blank">tickets</a></p>
+        <p>july 12 – denver, co – <a href="https://example.com/tickets2" target="_blank">tickets</a></p>
+        <p>july 20 – chicago, il – <a href="https://example.com/tickets3" target="_blank">tickets</a></p>
+      </div>
+    </label>
 
-  <label>
-    <input type="checkbox" />
-    listen
-    <div class="linkbox">
-      <p><a href="https://yourband.bandcamp.com" target="_blank">bandcamp</a></p>
-      <p><a href="https://open.spotify.com/yourband" target="_blank">spotify</a></p>
-      <p><a href="https://soundcloud.com/yourband" target="_blank">soundcloud</a></p>
-    </div>
-  </label>
+    <label>
+      <input type="checkbox" />
+      listen
+      <div class="linkbox">
+        <p><a href="https://yourband.bandcamp.com" target="_blank">bandcamp</a></p>
+        <p><a href="https://open.spotify.com/yourband" target="_blank">spotify</a></p>
+        <p><a href="https://soundcloud.com/yourband" target="_blank">soundcloud</a></p>
+      </div>
+    </label>
 
-  <label>
-    <input type="checkbox" />
-    merch
-    <div class="linkbox">
-      <p><a href="https://yourband.bigcartel.com" target="_blank">buy merch</a></p>
-    </div>
-  </label>
+    <label>
+      <input type="checkbox" />
+      merch
+      <div class="linkbox">
+        <p><a href="https://yourband.bigcartel.com" target="_blank">buy merch</a></p>
+      </div>
+    </label>
 
-  <label>
-    <input type="checkbox" />
-    socials
-    <div class="linkbox">
-      <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
-      <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
-      <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
-    </div>
-  </label>
+    <label>
+      <input type="checkbox" />
+      socials
+      <div class="linkbox">
+        <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
+        <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
+        <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
+      </div>
+    </label>
 
-  <label>
-    <input type="checkbox" />
-    contact
-    <div class="linkbox">
-      <p><a href="mailto:dredge.mgmt@gmail.com">dredge.mgmt@gmail.com</a></p>
-    </div>
-  </label>
+    <label>
+      <input type="checkbox" />
+      contact
+      <div class="linkbox">
+        <p><a href="mailto:dredge.mgmt@gmail.com">dredge.mgmt@gmail.com</a></p>
+      </div>
+    </label>
+  </div>
+
+  <div class="right">
+    <img src="IMG_3320 (1).JPG" alt="band image or logo" />
+  </div>
 
 </body>
 </html>
