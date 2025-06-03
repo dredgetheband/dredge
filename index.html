@@ -11,23 +11,25 @@
       margin: 0;
       padding: 0;
       display: flex;
-      flex-direction: row;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center;     /* Center the content vertically */
       height: 100vh;
     }
     .left {
       padding: 40px;
       width: 60%;
-    }
-    .right {
-      width: 40%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
+      text-align: center; /* Center-align all text */
     }
     h1 {
       font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-top: 0;
       margin-bottom: 30px;
+      color: #000;
     }
     label {
       display: block;
@@ -38,6 +40,7 @@
       display: none;
       margin-left: 20px;
       margin-top: 5px;
+      text-align: center; /* Keep linkbox text centered */
     }
     input[type="checkbox"]:checked + .linkbox {
       display: block;
@@ -49,25 +52,19 @@
     a:hover {
       text-decoration: none;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      max-height: 80vh;
-    }
   </style>
 </head>
 <body>
 
   <div class="left">
     <h1>dredge</h1>
+    <h2>we are band called dredge we are called dredge because dredge is the name of our band</h2>
 
     <label>
       <input type="checkbox" />
       tour
       <div class="linkbox">
-        <p>july 4 – springfield, mo – <a href="https://example.com/tickets1" target="_blank">tickets</a></p>
-        <p>july 12 – denver, co – <a href="https://example.com/tickets2" target="_blank">tickets</a></p>
-        <p>july 20 – chicago, il – <a href="https://example.com/tickets3" target="_blank">tickets</a></p>
+        <p>no shows yet. it sucks, we know but we'll be around soon.</p>
       </div>
     </label>
 
@@ -94,23 +91,5 @@
       socials
       <div class="linkbox">
         <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
-        <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
-        <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
-      </div>
-    </label>
+        <p><a href="https:/
 
-    <label>
-      <input type="checkbox" />
-      contact
-      <div class="linkbox">
-        <p><a href="mailto:dredge.mgmt@gmail.com">dredge.mgmt@gmail.com</a></p>
-      </div>
-    </label>
-  </div>
-
-  <div class="right">
-    <img src="IMG_3320 (1).JPG" alt="band image or logo" />
-  </div>
-
-</body>
-</html>
