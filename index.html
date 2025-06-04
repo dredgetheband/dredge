@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>dredge</title>
   <style>
     body {
@@ -11,46 +13,75 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* Center the content horizontally */
-      align-items: center;     /* Center the content vertically */
-      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
     .left {
       padding: 40px;
-      width: 60%;
-      text-align: center; /* Center-align all text */
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
     }
+
     h1 {
-      font-size: 36px;
+      font-size: 8vw;
       margin-bottom: 10px;
     }
+
     h2 {
-      font-size: 18px;
+      font-size: 4.5vw;
       font-weight: normal;
       margin-top: 0;
       margin-bottom: 30px;
-      color: #000;
+      color: black;
     }
+
     label {
       display: block;
       margin-top: 20px;
+      font-size: 4vw;
       cursor: pointer;
     }
+
     .linkbox {
       display: none;
-      margin-left: 20px;
       margin-top: 5px;
-      text-align: center; /* Keep linkbox text centered */
+      text-align: center;
+      font-size: 3.5vw;
     }
+
     input[type="checkbox"]:checked + .linkbox {
       display: block;
     }
+
     a {
       color: black;
       text-decoration: underline;
     }
+
     a:hover {
       text-decoration: none;
+    }
+
+    /* On wider screens, bump font sizes up */
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      label {
+        font-size: 18px;
+      }
+
+      .linkbox {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
