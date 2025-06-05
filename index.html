@@ -65,8 +65,29 @@
       text-decoration: none;
     }
 
-    /* On wider screens, bump font sizes up */
-    @media (min-width: 600px) {
+    .goblin-peek {
+      position: fixed;
+      bottom: -60px;
+      left: -20px;
+      width: 150px;
+      opacity: 0;
+      animation: goblinFade 2.5s ease-in forwards;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    @keyframes goblinFade {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
       h1 {
         font-size: 36px;
       }
@@ -81,6 +102,12 @@
 
       .linkbox {
         font-size: 16px;
+      }
+
+      .goblin-peek {
+        width: 90px;
+        bottom: -40px;
+        left: -15px;
       }
     }
   </style>
@@ -135,6 +162,9 @@
       </div>
     </label>
   </div>
+
+  <!-- Goblin image added here -->
+  <img src="IMG_2995-removebg.png" alt="Goblin Peeking" class="goblin-peek">
 
 </body>
 </html>
