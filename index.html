@@ -26,7 +26,9 @@
     }
 
     h1 {
-      font-size: 8vw;
+      font-family: "Monotype Baskerville", Baskerville, Georgia, serif;
+      font-weight: bold;
+      font-size: 3vw;
       margin-bottom: 10px;
     }
 
@@ -67,9 +69,9 @@
 
     .goblin-peek {
       position: fixed;
-      bottom: -90px;
-      left: -40px;
-      width: 220px;
+      bottom: -160px;
+      left: -60px;
+      width: 360px;
       opacity: 0;
       animation: goblinFade 2.5s ease-in forwards;
       z-index: 5;
@@ -88,10 +90,26 @@
     }
 
     @media (max-width: 768px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      label {
+        font-size: 18px;
+      }
+
+      .linkbox {
+        font-size: 16px;
+      }
+
       .goblin-peek {
-        width: 130px;
-        bottom: -60px;
-        left: -25px;
+        width: 240px;
+        bottom: -100px;
+        left: -40px;
       }
     }
   </style>
@@ -133,22 +151,4 @@
       socials
       <div class="linkbox">
         <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
-        <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
-        <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
-      </div>
-    </label>
-
-    <label>
-      <input type="checkbox" />
-      contact
-      <div class="linkbox">
-        <p><a href="mailto:bookings@dredgetheband.com">bookings@dredgetheband.com</a></p>
-      </div>
-    </label>
-  </div>
-
-  <!-- Goblin image -->
-  <img src="IMG_2995-removebg.png" alt="Goblin Peeking" class="goblin-peek">
-
-</body>
-</html>
+        <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="
