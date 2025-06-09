@@ -13,8 +13,9 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -24,6 +25,7 @@
       max-width: 600px;
       width: 90%;
       text-align: center;
+      margin-left: 160px; /* space for goblin on desktop */
     }
 
     .logo {
@@ -72,10 +74,9 @@
       bottom: 0;
       left: 0;
       height: 100vh;
-      max-height: 100%;
       opacity: 0;
       animation: goblinFade 2.5s ease-in forwards;
-      z-index: 2;
+      z-index: 1;
       pointer-events: none;
     }
 
@@ -94,11 +95,23 @@
       .logo {
         max-width: 220px;
       }
+
+      .left {
+        margin-left: 100px; /* smaller goblin space on mobile */
+      }
+
+      .goblin-peek {
+        height: 100vh;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Goblin image on the far left -->
+  <img src="Goblins Transparent BG.PNG" alt="Goblin Full Body" class="goblin-peek">
+
+  <!-- Main content -->
   <div class="left">
     <img src="IMG_3011.PNG" alt="Dredge Logo" class="logo" />
     <h2>we are a band called dredge we are called dredge because dredge is the name of our band<br>goblins 05/08</h2>
@@ -147,9 +160,6 @@
       </div>
     </label>
   </div>
-
-  <!-- Goblin image -->
-  <img src="Goblins Transparent BG.PNG" alt="Goblin Full Body" class="goblin-peek">
 
 </body>
 </html>
