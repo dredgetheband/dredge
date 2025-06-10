@@ -12,39 +12,45 @@
       text-transform: lowercase;
       margin: 0;
       padding: 0;
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
       min-height: 100vh;
       overflow-x: hidden;
-    }
-
-    .goblin-container {
-      flex: 0 0 auto;
-      width: 150px;
       display: flex;
-      align-items: flex-end;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
     .goblin-peek {
+      position: fixed;
+      bottom: 0;
+      left: 0;
       height: 100vh;
       width: auto;
-      max-width: 100%;
       opacity: 0;
       animation: goblinFade 2.5s ease-in forwards;
+      z-index: 1;
       pointer-events: none;
     }
 
+    @keyframes goblinFade {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .left {
-      flex: 1;
       padding: 40px;
       max-width: 600px;
-      width: 100%;
+      width: 90%;
       text-align: center;
+      position: relative;
+      z-index: 2;
+      margin-left: 300px; /* creates space for the goblin */
     }
 
     .logo {
@@ -88,89 +94,71 @@
       text-decoration: none;
     }
 
-    @keyframes goblinFade {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media (max-width: 768px) {
-      .goblin-container {
-        width: 100px;
+      .left {
+        margin-left: 300px; /* same goblin space on small screens */
+        padding: 20px;
       }
 
       .logo {
         max-width: 220px;
-      }
-
-      .left {
-        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="wrapper">
-    <!-- Goblin column -->
-    <div class="goblin-container">
-      <img src="Goblins Transparent BG.PNG" alt="Goblin Full Body" class="goblin-peek" />
-    </div>
+  <!-- Goblin on the far left -->
+  <img src="Goblins Transparent BG.PNG" alt="Goblin Full Body" class="goblin-peek" />
 
-    <!-- Main content -->
-    <div class="left">
-      <img src="IMG_3011.PNG" alt="Dredge Logo" class="logo" />
-      <h2>we are a band called dredge we are called dredge because dredge is the name of our band<br>goblins 05/08</h2>
+  <!-- Main content centered within space to the right of goblin -->
+  <div class="left">
+    <img src="IMG_3011.PNG" alt="Dredge Logo" class="logo" />
+    <h2>we are a band called dredge we are called dredge because dredge is the name of our band<br>goblins 05/08</h2>
 
-      <label>
-        <input type="checkbox" />
-        tour
-        <div class="linkbox">
-          <p>no shows yet. it sucks, we know, but we'll be around soon.</p>
-        </div>
-      </label>
+    <label>
+      <input type="checkbox" />
+      tour
+      <div class="linkbox">
+        <p>no shows yet. it sucks, we know, but we'll be around soon.</p>
+      </div>
+    </label>
 
-      <label>
-        <input type="checkbox" />
-        listen
-        <div class="linkbox">
-          <p><a href="https://yourband.bandcamp.com" target="_blank">bandcamp</a></p>
-          <p><a href="https://open.spotify.com/yourband" target="_blank">spotify</a></p>
-          <p><a href="https://soundcloud.com/yourband" target="_blank">soundcloud</a></p>
-        </div>
-      </label>
+    <label>
+      <input type="checkbox" />
+      listen
+      <div class="linkbox">
+        <p><a href="https://yourband.bandcamp.com" target="_blank">bandcamp</a></p>
+        <p><a href="https://open.spotify.com/yourband" target="_blank">spotify</a></p>
+        <p><a href="https://soundcloud.com/yourband" target="_blank">soundcloud</a></p>
+      </div>
+    </label>
 
-      <label>
-        <input type="checkbox" />
-        merch
-        <div class="linkbox">
-          <p><a href="https://yourband.bigcartel.com" target="_blank">buy merch</a></p>
-        </div>
-      </label>
+    <label>
+      <input type="checkbox" />
+      merch
+      <div class="linkbox">
+        <p><a href="https://yourband.bigcartel.com" target="_blank">buy merch</a></p>
+      </div>
+    </label>
 
-      <label>
-        <input type="checkbox" />
-        socials
-        <div class="linkbox">
-          <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
-          <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
-          <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
-        </div>
-      </label>
+    <label>
+      <input type="checkbox" />
+      socials
+      <div class="linkbox">
+        <p><a href="https://www.instagram.com/dredgetheband/" target="_blank">instagram</a></p>
+        <p><a href="https://www.youtube.com/channel/UCOPfGSSoUCI6eGHo8zp5lQg" target="_blank">youtube</a></p>
+        <p><a href="https://www.facebook.com/abandcalleddredge" target="_blank">facebook</a></p>
+      </div>
+    </label>
 
-      <label>
-        <input type="checkbox" />
-        contact
-        <div class="linkbox">
-          <p><a href="mailto:bookings@dredgetheband.com">bookings@dredgetheband.com</a></p>
-        </div>
-      </label>
-    </div>
+    <label>
+      <input type="checkbox" />
+      contact
+      <div class="linkbox">
+        <p><a href="mailto:bookings@dredgetheband.com">bookings@dredgetheband.com</a></p>
+      </div>
+    </label>
   </div>
 
 </body>
