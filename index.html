@@ -13,34 +13,9 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      overflow-x: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-    }
-
-    .goblin-peek {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      height: 100vh;
-      width: auto;
-      opacity: 0;
-      animation: goblinFade 2.5s ease-in forwards;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    @keyframes goblinFade {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .left {
@@ -48,9 +23,6 @@
       max-width: 600px;
       width: 90%;
       text-align: center;
-      position: relative;
-      z-index: 2;
-      margin-left: 300px; /* creates space for the goblin */
     }
 
     .logo {
@@ -95,23 +67,18 @@
     }
 
     @media (max-width: 768px) {
-      .left {
-        margin-left: 300px; /* same goblin space on small screens */
-        padding: 20px;
-      }
-
       .logo {
         max-width: 220px;
+      }
+
+      .left {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Goblin on the far left -->
-  <img src="Goblins Transparent BG.PNG" alt="Goblin Full Body" class="goblin-peek" />
-
-  <!-- Main content centered within space to the right of goblin -->
   <div class="left">
     <img src="IMG_3011.PNG" alt="Dredge Logo" class="logo" />
     <h2>we are a band called dredge we are called dredge because dredge is the name of our band<br>goblins 05/08</h2>
@@ -128,9 +95,7 @@
       <input type="checkbox" />
       listen
       <div class="linkbox">
-        <p><a href="https://yourband.bandcamp.com" target="_blank">bandcamp</a></p>
-        <p><a href="https://open.spotify.com/yourband" target="_blank">spotify</a></p>
-        <p><a href="https://soundcloud.com/yourband" target="_blank">soundcloud</a></p>
+        <p><a href="https://ps.tribly.fm/973qvmb" target="_blank">pre-save now</a></p>
       </div>
     </label>
 
@@ -138,7 +103,7 @@
       <input type="checkbox" />
       merch
       <div class="linkbox">
-        <p><a href="https://yourband.bigcartel.com" target="_blank">buy merch</a></p>
+        <p>loading</p>
       </div>
     </label>
 
